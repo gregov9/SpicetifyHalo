@@ -78,7 +78,7 @@ changeSvgs([
 ])
 
 waitForElement([".Root__top-container"], ([el]) => {
-  el.style.backgroundImage = `url(https://github.com/Adrien5902/SpicetifyCat/blob/main/assets/${getTheme()}/background.png?raw=true)`;
+  el.style.backgroundImage = `url(https://github.com/gregov9/SpicetifyHalo/blob/main/assets/${getTheme()}/background.png?raw=true)`;
 })
 
 /**
