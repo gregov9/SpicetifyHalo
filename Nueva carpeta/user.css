@@ -1,0 +1,184 @@
+/* Halo Edition - user.css - BALANCED HUD FIX */
+
+/* Custom Cursor: Energy Sword */
+html, body, #main, a, button, [role="button"], .main-playButton-PlayButton {
+    cursor: url('https://www.rw-designer.com/cursor-download/7297/sword.cur'), auto !important;
+}
+
+/* THE BACKGROUND */
+#main, .Root, .Root__top-container, body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://i.imgur.com/lwh8NNA.jpeg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+}
+
+/* GLOBAL BACKGROUND VARIABLES - MAKE BASE COMPLETELY TRANSPARENT */
+:root, body, #main, .Root {
+    --background-base: transparent !important;
+    --background-highlight: transparent !important;
+    --background-press: transparent !important;
+    --background-elevated-base: transparent !important;
+    --background-elevated-highlight: transparent !important;
+    --background-tinted-base: transparent !important;
+    --background-tinted-highlight: transparent !important;
+}
+
+/* SELECTIVE TRANSPARENCY - FULL */
+.main-view-container__scroll-node-child, 
+[role="main"], 
+.main-yourLibraryX-libraryRoot,
+.main-yourLibraryX-libraryContainer,
+.main-home-home,
+.main-gridContainer-gridContainer,
+.main-content-spacing,
+.main-view-container__scroll-node,
+.main-card-card,
+.main-rootlist-wrapper,
+.main-yourLibraryX-isLibraryXView,
+.main-buddyFeed-container,
+.main-buddyFeed-buddyFeed,
+.main-buddyFeed-content,
+.main-nowPlayingView-container,
+.main-nowPlayingView-content,
+.main-nowPlayingView-section,
+.main-entityHeader-container,
+.main-entityHeader-backgroundColor,
+.main-actionBarBackground-backdrop,
+.main-view-container__scroll-node-child main,
+.main-view-container__scroll-node-child [role="main"],
+section.main-home-homeSection,
+.main-shelf-shelf,
+.main-topBar-background,
+.main-topBar-overlay,
+.x-entityHeader-overlay,
+.x-actionBarBackground-backdrop,
+.main-home-home *,
+.main-home-home [class*="background"],
+.main-home-home [class*="Background"],
+.main-home-home [class*="Gradient"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+/* ALBUM/PLAYLIST HEADER AND TRACKLIST BACKDROP - FORCE TRANSPARENT */
+.main-entityHeader-container,
+.main-entityHeader-background,
+.main-entityHeader-background::after,
+.main-entityHeader-header,
+.main-entityHeader-topbarOverlay,
+.main-entityHeader-overlay,
+.main-entityHeader-imageGradient,
+.main-entityHeader-backgroundColor,
+.x-entityHeader-overlay,
+.x-actionBarBackground-backdrop,
+.main-trackList-trackListHeader,
+.main-trackList-header,
+.main-trackList-rowHeader {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+}
+
+/* SOLID HUD PANELS - Fully Transparent (Top and Nav) */
+.main-topBar-container,
+.main-navBar-navBar,
+.main-rootlist-rootlist,
+.main-yourLibraryX-libraryRoot,
+.main-yourLibraryX-libraryContainer {
+    background-color: transparent !important;
+    background: transparent !important;
+    backdrop-filter: none !important;
+    border: none !important;
+}
+
+/* PLAYER BAR - Solid HUD */
+.main-nowPlayingBar-container {
+    background-color: rgba(15, 20, 15, 0.85) !important;
+    backdrop-filter: blur(15px) !important;
+    border-top: 1px solid rgba(0, 163, 255, 0.3) !important;
+}
+
+/* VOLUME & PROGRESS BARS - Force visibility */
+.x-progressBar-progressBarBg,
+.progress-bar__bg {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+.x-progressBar-fillColor,
+.progress-bar__fg {
+    background-color: #00A3FF !important; /* Cortana Blue */
+}
+
+/* CUSTOM NAVIGATION BUTTONS - FIXED CONTRAST */
+/* Hide original SVGs for these buttons only */
+.main-skipBackButton-button svg, 
+.main-skipForwardButton-button svg,
+.main-topBar-backButton svg,
+.main-topBar-forwardButton svg {
+    display: none !important;
+}
+
+/* Previous / Back Button */
+.main-skipBackButton-button, 
+.main-topBar-backButton {
+    background-image: url('https://i.imgur.com/g86YU6C.png') !important;
+    background-size: 28px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 50% !important;
+    width: 42px !important;
+    height: 42px !important;
+    opacity: 1 !important;
+}
+
+/* Next / Forward Button */
+.main-skipForwardButton-button, 
+.main-topBar-forwardButton {
+    background-image: url('https://i.imgur.com/M6L2M0R.png') !important;
+    background-size: 28px !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 50% !important;
+    width: 42px !important;
+    height: 42px !important;
+    opacity: 1 !important;
+}
+
+.main-skipBackButton-button:hover, 
+.main-topBar-backButton:hover,
+.main-skipForwardButton-button:hover, 
+.main-topBar-forwardButton:hover {
+    background-color: rgba(0, 163, 255, 0.2) !important;
+    filter: drop-shadow(0 0 10px #00A3FF) !important;
+    transform: scale(1.05);
+}
+
+/* Play Button */
+.main-playButton-PlayButton {
+    background-color: #E3B32C !important; /* Visor Gold */
+    transform: scale(1.1);
+}
+
+/* Like Button */
+.main-addButton-button::after, 
+.main-likedButton-button::after {
+    content: "💙";
+    font-size: 20px;
+    filter: drop-shadow(0 0 8px #00A3FF);
+}
+.main-addButton-button svg, 
+.main-likedButton-button svg {
+    display: none !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 163, 255, 0.4);
+    border-radius: 10px;
+}
