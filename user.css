@@ -2,6 +2,11 @@
     --spice-main-elevated: rgba(0, 0, 0, 0.4)
 }
 
+/* Custom Cursor: Energy Sword */
+html, body, #main, a, button, [role="button"], .main-playButton-PlayButton {
+    cursor: url('https://www.rw-designer.com/cursor-download/7297/sword.cur'), auto !important;
+}
+
 .Root__top-container {
     background-color: unset !important;
     background-size: cover;
@@ -37,7 +42,7 @@
 .progress-bar__slider {
     transform: translate(-50%, -50%) !important;
     background-color: transparent !important;
-    background-image: url("https://www.nyan.cat/cats/original.gif");
+    background-image: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTJ6bHRleWRtY3Ric3EzMXFwempkcW01YWFwNnBuazM4Zm9rb2V4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/uooHb19hRELeM/giphy.gif");
     background-size: cover;
     height: 20px;
     width: 32px;
